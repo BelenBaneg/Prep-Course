@@ -20,8 +20,8 @@ function mayoriaDeEdad(edad) {
   //Si es menor, devolver --> "Not allowed"
   if(edad >= 18){
     return "Allowed";
-  } 
-    return "Not Allowed"
+  } else 
+  {  return "Not Allowed";}
   
 }
   
@@ -92,14 +92,14 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  numero === 10 || 5? true : false;
+  return numero === 10 || numero === 5? true : false;
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  numero < 50 || numero > 20 ? true : false;
+  return numero < 50 && numero > 20 ? true : false;
 }
 
 function esEntero(numero) {
@@ -127,7 +127,7 @@ function fizzBuzz(numero) {
   } else if( numero % 3 === 0 && numero % 5 === 0){
     return "fizzbuzz";
   } else {
-    return numero
+    return numero;
   }
 }
 
@@ -142,7 +142,7 @@ if(num1 > num2 && num1 > num3 && num1 > 0){
   return "Número 1 es mayor y positivo";
 } else if (num1 < 0 || num2 < 0 || num3 < 0){
   return "Hay negativos";
-} else if(num3 > num1 && num3 > num1 ){
+} else if(num3 > num1 && num3 > num2 ){
   return numero++;
 } else if(num1 === 0 || num2 === 0 || num3 === 0 ){
   return "Error";
@@ -171,16 +171,7 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-switch (valor){
-  case true:
-    console.log("Soy verdadero");
-    break;
-    case false:
-      console.log("Soy falso");
-    break;
-    default:
-      console.log ("Ingresa true o false")
-}
+
 }
 
 function tablaDelSeis(){
@@ -205,10 +196,13 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+let i= 0;
+  let valorFinal = 0;
 do { 
+  let valorFinal = numero + 5;
   
 } while (condition);
-
+return valorFinal
 }
 
 
