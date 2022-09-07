@@ -82,7 +82,19 @@ function agregarStringInvertida() {
     }
     return stringInvertida;
   };
+
+  //otra manera
+//split genera un array donde separa el string.
+//reverso, y lo vuelvo a juntar en un string con join
+//return this.split("").reverse().join("");
 }
+
+
+//otra manera
+//split genera un array donde separa el string.
+//reverso, y lo vuelvo a juntar en un string con join
+return this.split("").reverse().join("");
+
 
 // ---------------------------------------------------------------------------//
   //Crea el constructor de la clase "Persona"
@@ -102,7 +114,7 @@ function agregarStringInvertida() {
       edad,
       domicilio
     }*/
-
+//el this lo que hace es evitar conflictos con variables dentro del objeto, y hace directa referencia a la clase Persona, para decirle a la clase que el nombre le pertenece. this de persona es ella misma
     class Persona {
       constructor(nombre, apellido, edad, domicilio) {
         // Tu código:
@@ -117,9 +129,19 @@ function agregarStringInvertida() {
             Edad: this.edad,
             Domicilio: this.domicilio
           }
+          //ellos lo ponen a detalles por fuera
+          // detalle(){
+          //   return{ 
+          //     Nombre: this.nombre,
+          //     Apellido: this.apellido,
+          //     Edad: this.edad,
+          //     Domicilio: this.domicilio
+          //   }
+          // }
         }
       }
     }
+
 
 
 function crearInstanciaPersona(nombre, apellido, edad, dir) {
@@ -127,19 +149,22 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
  const persona = new Persona(nombre, apellido, edad, dir);
-
+//cuando creamos un obj nuevo entra el metodo new
   return persona
+
+
+  //o return new Persona(nombre, apellido, edad, dir)
 }
   
 function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
   //Ej: "Juan, 22 años"
-  // LO QUE HICE YO
+  // LO QUE HICE ANTES
   // Persona.datos = function (nombre, edad) {
-  //   return `${nombre}, ${edad}`
+  //   return `${nombre}, ${edad} años``
   // }
   Persona.prototype.datos = function() {
-    return this.nombre + ", " + this.edad + " años";
+    return `${this.nombre}, ${this.edad}  años`
   }
 }
   
